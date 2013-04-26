@@ -1,11 +1,20 @@
+<% if user_signed_in? %>
+	<h1>You're logged in </h1>
+<% else %>
+
+
 <div class="hero-unit">
 	<h1>Welcome to Phoenix Prime</h1>
 	<p>
 		You've found the Home Page for 
 		<%= link_to "One Month Rails", "http://onemonthrails.com" %>
 	</p>
-
+	<br>
 	<p>
-		<%= link_to "Sign Up Now!", "#", class: "btn btn-primary btn-large" %>
+		Please Sign Up Below
+	</p>
+	<p>
+		<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
 	</p>
 </div>
+<% end %>
